@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile - Orphan Guard</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo">Orphan Guard</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="orphanages.html">Orphanages</a></li>
+            <li><a href="volunteer.html">Volunteer</a></li>
+            <li><a href="donate.html">Donate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+            <li><button class="logout-btn">Logout</button></li>
+        </ul>
+    </nav>
+
+
+    <!-- PROFILE SECTION -->
+    <section class="profile-container">
+
+        <div class="profile-card">
+            <div class="profile-header">
+                <img src="https://cdn-icons-png.flaticon.com/512/149/149071.png" class="profile-img" alt="profile">
+                <h2 id="user-name">Loading...</h2>
+                <p id="user-email"></p>
+            </div>
+
+            <div class="profile-details">
+                <h3>Your Dashboard</h3>
+
+                <div class="grid">
+                    <a href="orphanages.html" class="box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/8832/8832167.png">
+                        <h4>Browse Orphanages</h4>
+                        <p>View profiles, stories and support children.</p>
+                    </a>
+
+                    <a href="donate.html" class="box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/891/891407.png">
+                        <h4>Make a Donation</h4>
+                        <p>Contribute to a cause that matters.</p>
+                    </a>
+
+                    <a href="volunteer.html" class="box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/3063/3063822.png">
+                        <h4>Become a Volunteer</h4>
+                        <p>Register to support events & activities.</p>
+                    </a>
+
+                    <a href="feedback.html" class="box">
+                        <img src="https://cdn-icons-png.flaticon.com/512/4144/4144859.png">
+                        <h4>Give Feedback</h4>
+                        <p>Share your experience with us.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <script src="profile.js"></script>
+</body>
+
+</html>

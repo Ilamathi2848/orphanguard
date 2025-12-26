@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Stars Orphanage</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="orportal6.css">
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-overlay">
+            <h1 class="hero-title">Welcome to Future Stars Orphanage</h1>
+            <p class="hero-subtitle">Providing love, care, and hope to children in need.</p>
+           
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <div class="container about-section py-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2 class="section-title mb-4">About Us</h2>
+                <p class="section-description">Sunshine Orphanage is dedicated to offering a safe, nurturing environment for children. Our mission is to ensure every child has the opportunity to grow, learn, and thrive. With a focus on education, healthcare, and emotional well-being, we aim to create brighter futures.</p>
+            </div>
+            <div class="col-md-6 text-center">
+                <img src="hope-banner.jpg" alt="About Us Image" class="img-fluid rounded shadow-lg">
+            </div>
+        </div>
+    </div>
+
+    <!-- Unique Stories Section -->
+    <div class="container unique-stories-section py-5">
+        <h2 class="section-title mb-4">Unique Stories</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="story-card">
+                    <img src="sty1.jpg" alt="Story Image" class="story-image rounded">
+                    <div class="story-content">
+                        <h5 class="story-title">Emma's Journey</h5>
+                        <p class="story-text">Emma was abandoned at the age of 4. She loves to draw and is very artistic. Her story is one of resilience and creativity.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="story-card">
+                    <img src="sty2.jpg" alt="Story Image" class="story-image rounded">
+                    <div class="story-content">
+                        <h5 class="story-title">John's New Beginning</h5>
+                        <p class="story-text">John was separated from his parents due to family struggles. He is very kind-hearted and enjoys helping others, proving that love can rebuild.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="story-card">
+                    <img src="sty3.jpg" alt="Story Image" class="story-image rounded">
+                    <div class="story-content">
+                        <h5 class="story-title">Sophia's Healing</h5>
+                        <p class="story-text">After losing her parents in a tragic accident, Sophia found comfort in animals. She has blossomed into a joyful and compassionate young girl.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+   
+
+   <!-- Details of the Children Section -->
+<div class="container my-5">
+    <h2 class="section-title">Details of the Children</h2>
+
+    <!-- Children Details Grid -->
+    <div class="children-details-grid">
+        <!-- Child Card 1 -->
+        <div class="child-card" onclick="showChildDetails('emma')">
+            <img src="ch2.jpg" alt="Child 1" class="child-img">
+            <h3 class="child-name">Emma Wilson</h3>
+        </div>
+
+        <!-- Child Card 2 -->
+        <div class="child-card" onclick="showChildDetails('john')">
+            <img src="ch3.jpg" alt="Child 2" class="child-img">
+            <h3 class="child-name">John Doe</h3>
+        </div>
+
+        <!-- Child Card 3 -->
+        <div class="child-card" onclick="showChildDetails('sophia')">
+            <img src="ch4.jpg" alt="Child 3" class="child-img">
+            <h3 class="child-name">Sophia Martins</h3>
+        </div>
+
+        <!-- Child Card 4 -->
+        <div class="child-card" onclick="showChildDetails('lucas')">
+            <img src="ch5.jpg" alt="Child 4" class="child-img">
+            <h3 class="child-name">Lucas Brown</h3>
+        </div>
+    </div>
+
+    <!-- Hidden Child Details -->
+    <div id="child-details" class="child-details-overlay">
+        <div class="child-details-content">
+            <button class="close-btn" onclick="hideChildDetails()">×</button>
+            <h3 id="child-name"></h3>
+            <p id="child-age"></p>
+            <p id="child-background"></p>
+            <p id="child-interests"></p>
+        </div>
+    </div>
+</div>
+
+
+
+<!-- Photo Gallery -->
+<div class="container my-5">
+    <h2 class="section-title">Photo Gallery</h2>
+    <div class="gallery d-flex flex-wrap justify-content-center">
+        <div class="gallery-item">
+            <img src="img5.jpg" alt="Gallery Image 1" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img5.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="img6.jpg" alt="Gallery Image 2" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img6.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="img7.jpg" alt="Gallery Image 3" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img7.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="img8.jpg" alt="Gallery Image 4" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img8.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="img6.jpg" alt="Gallery Image 5" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img9.jpg">
+        </div>
+        <div class="gallery-item">
+            <img src="img7.jpg" alt="Gallery Image 6" class="gallery-img" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="img10.jpg">
+        </div>
+    </div>
+</div>
+
+<!-- Modal for Image Viewing -->
+<div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="galleryModalLabel">Gallery Image</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImage" src="" alt="Gallery Image" class="img-fluid">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    
+    <!-- Donation Section -->
+<div class="container my-5">
+    <h2 class="section-title">Donate to Support</h2>
+    <p>Your contribution can make a huge difference in the lives of children at Sunshine Orphanage. Here’s how you can help:</p>
+
+    <div class="donation-options">
+        <div class="donation-card">
+            <div class="donation-icon">
+                <img src="bank-icon.png" alt="Money Donation Icon">
+            </div>
+            <h3>Monetary Donations</h3>
+            <p>Support education, healthcare, and basic needs with your generous financial contributions.</p>
+        </div>
+
+        <div class="donation-card">
+            <div class="donation-icon">
+                <img src="feature2(1).jpg" alt="Supplies Donation Icon">
+            </div>
+            <h3>Supply Donations</h3>
+            <p>Donate school supplies, clothing, or toys to bring joy and resources to our children.</p>
+        </div>
+
+        <div class="donation-card">
+            <div class="donation-icon">
+                <img src="donate.jpg" alt="Volunteer Icon">
+            </div>
+            <h3>Volunteer</h3>
+            <p>Share your time and skills to help us create a nurturing environment for our children.</p>
+        </div>
+    </div>
+</div>
+
+   <!-- Contact & Map Section -->
+<div class="container my-5 contact-map">
+    <div class="map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509512!2d144.96315791550474!3d-37.8136277797517!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f11fd81%3A0xf5774d56d24b120!2sVictoria%20Orphanage!5e0!3m2!1sen!2sau!4v1605741432748!5m2!1sen!2sau" width="100%" height="100%" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="contact-details">
+        <h4>Contact Us</h4>
+        <div class="contact-info">
+            <p><i class="fas fa-envelope"></i> Email: contact@sunshineorphanage.com</p>
+            <p><i class="fas fa-phone-alt"></i> Phone: +123-456-7890</p>
+            <p><i class="fas fa-map-marker-alt"></i> Address: 1234 Hope Street, Cityville, Country</p>
+        </div>
+        <form>
+            <div class="mb-3">
+                <label for="contactName" class="form-label">Name</label>
+                <input type="text" class="form-control" id="contactName" placeholder="Enter your name" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactEmail" class="form-label">Email</label>
+                <input type="email" class="form-control" id="contactEmail" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="contactMessage" class="form-label">Message</label>
+                <textarea class="form-control" id="contactMessage" rows="3" placeholder="Your message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-custom">Send Message</button>
+        </form>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2024 Sunshine Orphanage. All Rights Reserved.</p>
+    </footer>
+
+   <!-- Bootstrap JS -->
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+   <script>
+    const childData = {
+        emma: {
+            name: "Emma Wilson",
+            age: "Age: 7 years",
+            background: "Background: Emma was abandoned at the age of 4. She loves to draw and is very artistic.",
+            interests: "Interests: Painting, Reading, Outdoor Activities"
+        },
+        john: {
+            name: "John Doe",
+            age: "Age: 9 years",
+            background: "Background: John was separated from his parents due to family struggles. He is very kind-hearted and enjoys helping others.",
+            interests: "Interests: Playing soccer, Helping with chores, Studying"
+        },
+        sophia: {
+            name: "Sophia Martins",
+            age: "Age: 5 years",
+            background: "Background: Sophia came to us after losing her parents in an accident. She loves animals and is always excited to play with pets.",
+            interests: "Interests: Playing with animals, Singing, Dancing"
+        },
+        lucas: {
+            name: "Lucas Brown",
+            age: "Age: 11 years",
+            background: "Background: Lucas has been with us since he was 6. He is a natural leader and enjoys organizing games for the other children.",
+            interests: "Interests: Sports, Leadership Activities, Video Games"
+        }
+    };
+
+    function showChildDetails(childKey) {
+        const details = childData[childKey];
+        document.getElementById("child-name").textContent = details.name;
+        document.getElementById("child-age").textContent = details.age;
+        document.getElementById("child-background").textContent = details.background;
+        document.getElementById("child-interests").textContent = details.interests;
+
+        const overlay = document.getElementById("child-details");
+        overlay.classList.add("active");
+    }
+
+    function hideChildDetails() {
+        const overlay = document.getElementById("child-details");
+        overlay.classList.remove("active");
+    }
+
+
+       document.addEventListener("DOMContentLoaded", function() {
+           // Event listener for donation form submission
+           const donationForm = document.getElementById('donationForm');
+           donationForm.addEventListener('submit', function(event) {
+               event.preventDefault();
+               const donationAmount = document.getElementById('donationAmount').value;
+               if (donationAmount && donationAmount > 0) {
+                   alert(`Thank you for your generous donation of $${donationAmount}!`);
+               } else {
+                   alert('Please enter a valid donation amount.');
+               }
+           });
+           document.addEventListener("DOMContentLoaded", function () {
+        const galleryImages = document.querySelectorAll(".gallery-img");
+        const modalImage = document.getElementById("modalImage");
+
+        galleryImages.forEach(img => {
+            img.addEventListener("click", function () {
+                const imgSrc = this.getAttribute("data-img");
+                modalImage.src = imgSrc;
+            });
+        });
+    });
+
+           // Event listener for contact form submission
+           const contactForm = document.getElementById('contactForm');
+           contactForm.addEventListener('submit', function(event) {
+               event.preventDefault();
+               const contactName = document.getElementById('contactName').value;
+               const contactEmail = document.getElementById('contactEmail').value;
+               const contactMessage = document.getElementById('contactMessage').value;
+               if (contactName && contactEmail && contactMessage) {
+                   alert(`Thank you ${contactName}! Your message has been sent.`);
+               } else {
+                   alert('Please fill out all fields.');
+               }
+           });
+       });
+   </script>
+</body>
+</html>

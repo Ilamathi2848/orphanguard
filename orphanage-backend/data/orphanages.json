@@ -1,0 +1,45 @@
+[
+  {
+    "id": "sunshine-home",
+    "name": "Sunshine Home",
+    "tagline": "A safe place for every child",
+    "location": "Chennai, India",
+    "established": 1998,
+    "phone": "+91 98765 43210",
+    "email": "contact@sunshinehome.org",
+    "visitingHours": "Mon–Sat, 10am–5pm",
+    "coverImage": "/images/cover1.jpg",
+
+    "counts": {
+      "children": 42,
+      "volunteers": 15,
+      "staff": 9
+    },
+
+    "facilities": ["Playground", "Library", "Dormitory", "Medical Room"],
+
+    "children": [
+      {
+        "firstName": "Anitha",
+        "age": 9,
+        "photo": "/images/child1.jpg",
+        "shortBio": "Loves drawing and music.",
+        "consentForPublishing": false
+      }
+    ],
+
+    "gallery": [
+      "/images/gallery1.jpg",
+      "/images/gallery2.jpg"
+    ],
+
+    "donationIntro": "Your contribution helps provide education and meals.",
+    "volunteerIntro": "Join us to teach and support the children.",
+    "donationBreakdown": [
+      "40% Education",
+      "30% Meals",
+      "20% Healthcare",
+      "10% Activities"
+    ]
+  }
+]

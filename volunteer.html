@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Volunteer Registration</title>
+  <link rel="stylesheet" href="volunteer.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="container">
+    <header class="header-card">
+      <h1>Join Us in Supporting Orphanages</h1>
+      <p>Your time and skills can make a huge difference in the lives of children.</p>
+    </header>
+
+    <section class="card intro-card">
+      <h2>Why Volunteer?</h2>
+      <p>Volunteering at an orphanage is a fulfilling way to contribute to the well-being and development of children in need. Help us provide love, education, and a brighter future.</p>
+    </section>
+
+    <section class="card form-card">
+      <h2>Volunteer Registration</h2>
+      <form id="volunteer-form">
+        <div class="form-section">
+          <h3>Personal Details</h3>
+          <label for="fullname">Full Name</label>
+          <input type="text" id="fullname" name="fullname" placeholder="John Doe" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+          <label for="contact">Contact Number</label>
+          <input type="tel" id="contact" name="contact" placeholder="+91 9876543210">
+        </div>
+
+        <div class="form-section">
+          <h3>Volunteer Preferences</h3>
+          <label for="availability">Availability</label>
+          <select id="availability" name="availability" required>
+            <option value="weekday-mornings">Weekday Mornings</option>
+            <option value="weekday-afternoons">Weekday Afternoons</option>
+            <option value="weekends">Weekends</option>
+            <option value="flexible">Flexible</option>
+          </select>
+
+          <label for="skills">Skills You Can Offer</label>
+          <textarea id="skills" name="skills" rows="4" placeholder="Describe your skills and how you can contribute"></textarea>
+
+          <label>Preferred Roles</label>
+          <div class="checkbox-group">
+            <input type="checkbox" id="teaching" name="roles[]" value="Teaching">
+            <label for="teaching">Teaching & Tutoring</label>
+
+            <input type="checkbox" id="event" name="roles[]" value="Event Organization">
+            <label for="event">Event Organization</label>
+
+            <input type="checkbox" id="healthcare" name="roles[]" value="Healthcare">
+            <label for="healthcare">Healthcare Assistance</label>
+
+            <input type="checkbox" id="admin" name="roles[]" value="Administration">
+            <label for="admin">Administrative Support</label>
+          </div>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Registration</button>
+      </form>
+    </section>
+  </div>
+</body>
+<script src="volunteer.js"></script>
+
+</html>

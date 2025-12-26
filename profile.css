@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background: #f1f3f8;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #ffffff;
+    padding: 15px 50px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.nav-links a,
+.logout-btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    padding: 8px 15px;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover,
+.logout-btn:hover {
+    background: #ff5f7e;
+    color: white;
+}
+
+.logout-btn {
+    border: none;
+    background: #ff5f7e;
+    color: white;
+    cursor: pointer;
+}
+
+/* PROFILE BOX */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.profile-card {
+    width: 70%;
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
+
+.profile-header {
+    text-align: center;
+}
+
+.profile-img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.profile-details {
+    margin-top: 25px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    margin-top: 20px;
+}
+
+.box {
+    text-align: center;
+    padding: 25px;
+    background: #f8f9fb;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    transition: .3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.box img {
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+.box:hover {
+    transform: translateY(-5px);
+    background: white;
+}

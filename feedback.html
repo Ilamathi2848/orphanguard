@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback Form</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="feedback.css">
+</head>
+<body>
+  <div class="container">
+    <header class="header-card">
+      <h1>We Value Your Feedback</h1>
+      <p>Your input helps us improve our services. Please share your thoughts!</p>
+    </header>
+
+    <section class="card form-card">
+      <h2>Submit Feedback</h2>
+      <form id="feedbackForm">
+        <div class="form-section">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="example@mail.com" required>
+
+          <label for="rating">Rating</label>
+          <select id="rating" name="rating" required>
+            <option value="" disabled selected>Choose a rating</option>
+            <option value="1">1 - Poor</option>
+            <option value="2">2 - Fair</option>
+            <option value="3">3 - Good</option>
+            <option value="4">4 - Very Good</option>
+            <option value="5">5 - Excellent</option>
+          </select>
+
+          <label for="comments">Comments</label>
+          <textarea id="comments" name="comments" rows="4" placeholder="Share your feedback here..." required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Feedback</button>
+      </form>
+    </section>
+  </div>
+
+  <script>
+document.getElementById('feedbackForm').addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        rating: document.getElementById('rating').value,
+        comments: document.getElementById('comments').value
+    };
+
+    try {
+        const response = await fetch('http://localhost:5000/api/feedback', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+
+        const result = await response.json();
+        alert(result.message);
+        this.reset();
+    } catch (err) {
+        console.error('❌ Error:', err);
+        alert('Something went wrong. Please try again.');
+    }
+});
+  </script>
+</body>
+</html>

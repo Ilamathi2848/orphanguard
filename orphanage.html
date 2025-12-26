@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>OrphanConnect — Orphanage</title>
+  <link rel="stylesheet" href="orphanage.css"/>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap">
+      <div class="brand">OrphanConnect</div>
+      <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="orphanages.html">Orphanages</a>
+      </nav>
+      <button class="donate-btn">Donate</button>
+    </div>
+  </header>
+
+  <main class="wrap orphan-main">
+    <section class="hero">
+      <div class="hero-left">
+        <h1 id="o-name">Loading...</h1>
+        <p id="o-sub" class="muted"></p>
+
+        <div class="stats">
+          <div><strong id="stat-children">—</strong><span>Children</span></div>
+          <div><strong id="stat-volunteers">—</strong><span>Volunteers</span></div>
+          <div><strong id="stat-staff">—</strong><span>Staff</span></div>
+          <div><strong id="stat-facilities">—</strong><span>Facilities</span></div>
+        </div>
+
+        <div class="hero-actions">
+          <button class="visit-btn" id="donate-now">Donate</button>
+          <button class="small-btn" id="volunteer-now">Volunteer</button>
+          <button class="small-btn" id="copy-contact">Copy Contact</button>
+        </div>
+      </div>
+
+      <div id="cover-photo" class="hero-cover"></div>
+    </section>
+
+    <section class="tabs">
+      <button class="tab-btn active" data-tab="about">About</button>
+      <button class="tab-btn" data-tab="stories">Stories</button>
+      <button class="tab-btn" data-tab="children">Children</button>
+      <button class="tab-btn" data-tab="volunteers">Volunteers</button>
+      <button class="tab-btn" data-tab="staff">Staff</button>
+      <button class="tab-btn" data-tab="facilities">Facilities</button>
+      <button class="tab-btn" data-tab="gallery">Gallery</button>
+      <button class="tab-btn" data-tab="donation">Donation</button>
+      <button class="tab-btn" data-tab="contact">Contact</button>
+    </section>
+
+    <section id="content" class="content-card">
+      <p class="muted">Loading...</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap">© <span id="year2"></span> OrphanConnect</div></footer>
+
+  <script src="orphanage.js"></script>
+</body>
+</html>

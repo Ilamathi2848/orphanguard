@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orphan Guard - Orphanage Management System</title>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" type="png" sizes="55x55" href="logo3.png">
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+    <img src="logo3.png" alt="Orphan Guard Logo">
+    <span class="brand-text">
+        Orphan<br>Guard
+    </span>
+</div>
+
+
+                <ul class="nav-menu">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="orphanages.html">Orphanages</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="volunteer.html" class="cta">Volunteer</a></li>
+                    <li><a href="#daily-happenings">Recent Updates</a></li>
+                    <li><a href="feedback.html">Feedback</a></li>
+                </ul>
+             <div id="nav-user-section" class="nav-user-section">
+    <img src="user.png" alt="User Icon" class="user-icon">
+    <a href="signup.html" class="login-btn">Login</a>
+</div>
+
+            </nav>
+            <div class="hero-content">
+                <h2>Empowering Orphanages with Modern Solutions</h2>
+                <p>Bringing efficiency and transparency to orphanage management systems.</p>
+                <a href="signup.html" class="hero-btn">Get Started</a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <p>Our mission is to support orphanages in managing their day-to-day operations efficiently. We focus on providing tools for child management, donation tracking, and volunteer coordination. With a user-friendly interface and powerful features, Orphan Guard empowers orphanages to operate with transparency and efficiency.</p>
+            </div>
+        </div>
+    </section>
+   
+
+    <section id="features" class="features-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Key Features</h2>
+            </div>
+            <div class="features-grid">
+                <div class="feature-box">
+                    <img src="feature1.jpg" alt="Child Management">
+                    <h3>Child Management</h3>
+                    <p>Manage children's profiles, medical records, and educational progress efficiently.</p>
+                </div>
+                <div class="feature-box">
+                    <img src="feature2.jpg" alt="Donation Tracking">
+                    <h3>Donation Tracking</h3>
+                    <p>Ensure transparency by tracking donations and properly allocating funds.</p>
+                </div>
+                <div class="feature-box">
+                    <img src="feature3.jpg" alt="Volunteer Management">
+                    <h3>Volunteer Management</h3>
+                    <p>Organize and schedule volunteers effectively, ensuring smooth operations.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="daily-happenings" class="happenings-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Community happenings</h2>
+            </div>
+            <div class="slideshow-container">
+
+    <!-- Slide 1 -->
+    <div class="mySlides fade">
+        <div class="happening-card">
+            <img src="orphan1.jpg" alt="Children Celebration">
+            <div class="happening-overlay">
+                <h3>A Day of Joy</h3>
+                <p>Special celebrations filled with laughter, games, and happiness for every child.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="mySlides fade">
+        <div class="happening-card">
+            <img src="orphan2.jpg" alt="Volunteer Teaching">
+            <div class="happening-overlay">
+                <h3>Volunteers in Action</h3>
+                <p>Dedicated volunteers guiding children through education and creative activities.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Slide 3 -->
+    <div class="mySlides fade">
+        <div class="happening-card">
+            <img src="background.jpg" alt="New Facility">
+            <div class="happening-overlay">
+                <h3>New Beginnings</h3>
+                <p>Opening new facilities to provide a safer and happier environment for children.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Arrows -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+
+<!-- Dots -->
+<div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+        </div>
+    </section>
+    
+    
+    <section class="cta-section">
+        <div class="container">
+            <h2>Join Us in Transforming Orphanage Management</h2>
+            <p>Experience the full potential of our system. Sign up today!</p>
+            <a href="signup.html" class="cta-btn">Sign Up Now</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Orphan Guard. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="navbar.js"></script>
+
+    <script>
+        let slideIndex = 0;
+        showSlides();
+    
+        // Function to show slides with automatic transitions
+        function showSlides() {
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+    
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  // Hide all slides
+            }
+    
+            slideIndex++;
+            if (slideIndex > slides.length) {slideIndex = 1} // Reset to first slide after the last one
+    
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");  // Remove active class from dots
+            }
+    
+            slides[slideIndex-1].style.display = "block";  // Show current slide
+            dots[slideIndex-1].className += " active";  // Highlight corresponding dot
+    
+            setTimeout(showSlides, 5000); // Change image every 5 seconds
+        }
+    
+        // Manual slide navigation
+        function plusSlides(n) {
+            showSpecificSlide(slideIndex += n);
+        }
+    
+        // Specific slide navigation (for dots or manual arrows)
+        function currentSlide(n) {
+            showSpecificSlide(slideIndex = n);
+        }
+    
+        function showSpecificSlide(n) {
+            let slides = document.getElementsByClassName("mySlides");
+            let dots = document.getElementsByClassName("dot");
+    
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+    
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+    
+            for (let i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+    
+            slides[slideIndex-1].style.display = "block";  
+            dots[slideIndex-1].className += " active";
+        }
+        </script>
+        
+       
+
+</body>
+</html>
